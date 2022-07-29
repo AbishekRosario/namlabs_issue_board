@@ -1,0 +1,20 @@
+<h1>Issue Borad</h1>
+<a routerLink="/createpage"><button class="btn-info">create</button></a>
+<table id="customers" >
+        <thead>
+          <tr>
+            <th>title</th>
+            <th>description</th>
+            <th>action</th> 
+          <tr>  
+        </thead>
+        <tbody>
+            <tr *ngFor= "let data of tableData">
+            <td>{{data.title}}</td>
+            <td>{{data.description}}</td>
+             <td>
+             <button type="button" (click)="edit(data)" class="btn-up">Edit</button> &nbsp;&nbsp; 
+              <button class="btn-danger"  (click)="deleteData(data.id)"> Delete</button>
+             </td>
+             </tr>
+            </tbody>

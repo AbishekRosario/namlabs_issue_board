@@ -1,0 +1,12 @@
+<form class="btn-fm" [formGroup]= "reactiveForm" novalidate>
+    <h2 class="btn-hd">Edit Your Issue</h2>
+  
+    <label for="title">title: </label>
+    <input id="title" type="text" placeholder="Enter titile" formControlName="title">
+  <br>
+  <p><label for="description">description:</label></p>
+    <textarea id="description" name="description" rows="4" cols="50" placeholder="Enter issue" formControlName="description"></textarea>
+ <br>
+<button type="button" (click)="update()"  class="btn-ad">Edit</button>
+
+</form>
